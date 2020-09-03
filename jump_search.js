@@ -5,7 +5,6 @@ function jumpSearch(arr, target) {
 	let step = Math.floor(Math.sqrt(len));
 
 	let blockStart = 0, currentStep = step;
-	console.log("testing", blockStart, arr[blockStart], target, Math.min(currentStep, len) -1)
 
 	while (arr[Math.min(currentStep, len) - 1] < target)
 	{
@@ -16,7 +15,6 @@ function jumpSearch(arr, target) {
 			return -1;
 	}
 
-	console.log("testing", blockStart, arr[blockStart], target, step)
 
 	while (arr[blockStart] < target)
 	{
@@ -25,11 +23,10 @@ function jumpSearch(arr, target) {
 		if (blockStart == Math.min(currentStep, len))
 			return -1;
 	}
-	console.log("testing", blockStart, arr[blockStart], target)
+
+
 	if (arr[blockStart] == target)
 		return blockStart
 	else
 		return -1;
 }
-
-console.log(jumpSearch(array, 8));
